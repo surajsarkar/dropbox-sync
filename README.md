@@ -1,6 +1,6 @@
-# sdb (Simple Dropbox Sync)
+# dbx (Simple Dropbox Sync)
 
-`sdb` is a lightweight CLI tool designed for developers who work across GitHub and Dropbox. It bridges the gap by allowing you to synchronize your Git branches directly to Dropbox folders with a single command.
+`dbx` is a lightweight CLI tool designed for developers who work across GitHub and Dropbox. It bridges the gap by allowing you to synchronize your Git branches directly to Dropbox folders with a single command.
 
 Ideal for scenarios where you need to share code with collaborators who use Dropbox for privacy or convenience, while you maintain your workflow in Git.
 
@@ -10,14 +10,14 @@ Ideal for scenarios where you need to share code with collaborators who use Drop
 - **Delta Sync (Push):** By default, only uploads changes since your last commit to save bandwidth and time.
 - **Smart Pull:** Downloads files from Dropbox only if they are newer than your local copies.
 - **Full Sync Support:** Automatically performs a full upload if a branch folder doesn't yet exist on Dropbox.
-- **Simple CLI:** Clean commands (`sdb push`, `sdb pull`) for a seamless workflow.
+- **Simple CLI:** Clean commands (`dbx push`, `dbx pull`) for a seamless workflow.
 
 ## 🛠 Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/dropbox-sync.git
-   cd dropbox-sync
+   git clone https://github.com/your-username/dbx-sync.git
+   cd dbx-sync
    ```
 
 2. **Install the package:**
@@ -39,17 +39,17 @@ Ideal for scenarios where you need to share code with collaborators who use Drop
 ### Push to Dropbox
 Sync local changes from the current branch to Dropbox:
 ```bash
-sdb push
+dbx push
 ```
 *Note: This defaults to syncing `HEAD~1..HEAD`. To sync a specific range:*
 ```bash
-sdb push <start_commit> <end_commit>
+dbx push <start_commit> <end_commit>
 ```
 
 ### Pull from Dropbox
 Download newer files from the corresponding branch folder in Dropbox:
 ```bash
-sdb pull
+dbx pull
 ```
 
 ## 🔑 Dropbox Setup
